@@ -1,0 +1,336 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  html, body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #E2E1E4;
+  margin: 0;
+  padding: 0;
+}
+/* ******************* Navagation ******************** */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 110, 140);
+    color: #FFF;
+    position: sticky;
+  }
+  
+  .brand-logo{
+    height: 3.5rem; 
+    margin: 1rem 2rem;
+  }
+  
+  .navbar-links ul{
+    margin: 2em;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-links li{
+    list-style: none;
+    font-size: 1.25em;
+  }
+
+  .navbar-links li:hover{
+      background-color: rgb(150, 219, 247); 
+  }
+
+  .navbar-links li a{
+    text-decoration: none;
+    color: #FFF;
+    padding: 1.5rem;
+    display: block;
+  }
+
+  .navbar-links li a:hover{
+      color: #653A23;
+  }
+
+  .toggle-button{
+      position: absolute;
+      right: 1rem;
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+  }
+
+  .toggle-button .bar{
+      height: 3px;
+      width: 100%;
+      background-color: #FFF;
+      border-radius: 10px;
+  }
+
+
+  @media (max-width: 1000px){
+      .toggle-button{
+          display: flex;
+          margin: 2rem;
+      }
+      .navbar-links{
+          display: none;
+          width: 100%
+      }
+
+      .navbar{
+          flex-direction: column;
+          align-items: flex-start;
+      }
+
+      .navbar-links ul{
+          flex-direction: column;
+          width: 100%;
+      }
+
+      .navbar-links li{
+          text-align: center;
+      }
+
+      .navbar-links li a{
+          padding: .75rem 1rem;
+      }
+      .navbar-links.active{
+          display: flex;
+      }
+
+  
+  }
+
+
+/* ************************ Banner *********************** */
+.banner{
+  background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  height: 100vh;
+  max-height: fit-content;
+}
+
+
+.about{
+  background-color: rgba(91,87,77, .95);
+  padding: 5%;
+  margin: 5% auto;
+  width: 80%;
+}
+
+.about img{
+  height: 12%;
+  display: block;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 25%;
+}
+
+.greatCoffee{
+  color: #E2E1E4;
+  text-shadow: 4px 2px rgb(0, 110, 140);
+  margin: 5% 0;
+  font-size: 3.5em;  
+}
+
+.about .description{
+  position: static;
+  text-align: center;
+  margin: auto;
+  color: #E2E1E4;
+}
+
+.about .description .beans{
+  margin: 5% auto;
+}
+
+.about p{
+  font-size: 1.15em;
+}
+
+@media (max-width: 680px){
+  .greatCoffee{
+    font-size: 2.5rem;
+    padding: 5%;
+  }
+
+  .about .description{
+    margin: 15% 0;
+      margin: 5% auto;
+  }
+
+  .about .description .beans{
+    margin: 5% auto;
+    height: 75px;
+  }
+
+  .about p{
+     font-size: 1rem;
+     padding: 5%;
+  }
+
+  
+}
+
+
+
+/* ************************* Menu Heading ******************************* */
+#full-menu{
+  background-image: url('https://images.unsplash.com/photo-1606486544554-164d98da4889?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80');
+  margin: 0;
+  padding-top: 5%;;
+  background-size: cover;
+}
+.container{
+  margin: 0;
+  padding: 1.5em;
+}
+
+.menu{
+  font-family: sans-serif;
+  font-size: 14px;
+  background-color: rgba(226, 225, 228, .85);
+  width: 80%;
+  padding: 0;
+  margin: 0 10%;
+}
+
+.menu-subheading{
+  margin: 0 auto;
+  text-align: center;
+  grid-template-columns: 1fr;
+  margin: 10% 0;
+}
+
+
+.menu-subheading li{
+  list-style: none;
+    margin: 0 auto;
+  text-align: center;
+}
+
+
+.menu-group-heading{
+  margin: 0;
+  padding: 1em 0;
+  border-bottom: 2px solid rgb(87, 50, 30);
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.menu-group-subheading{
+  display: block;
+  text-align: center;
+  font-size: .5em;
+}
+
+.menu-group{
+  display: grid;
+  /*grid-template-columns allows you to specify what your columns will look like and how they are going to be sized.  1fr gives a single column layout taking up full width.*/
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+
+.menu-item{
+  display: flex;
+}
+
+.menu-item-image{
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+}
+
+.menu-item-image:hover{
+    cursor: pointer;
+}
+
+.menu-item-text{
+  flex-grow: 1;
+}
+
+.menu-item-heading{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name{
+  margin-right: 1.5em;
+}
+
+.menu-item-name:hover{
+  text-decoration: underline;
+    color: rgb(101, 58, 35);
+    cursor: pointer;
+}
+
+.menu-item-palatte:hover{
+  color:rgba(101, 58, 35, .75);
+  cursor: pointer;
+}
+
+.menu-item-description{
+  line-height: 1.3rem;
+  padding-right: 5%;
+}
+
+.menu-item-price{
+  padding-right: 5%;
+}
+
+@media screen and (min-width: 1000px){
+
+    .menu{
+    font-size: 16px;
+    }
+
+    .menu-group{
+  /*makes 'X' number of '1fr' columns that take up even amounts of space*/
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .menu-item-image{
+    width: 150px;
+    height: 150px;
+    }
+}
+
+.hoursandlocation{
+    background-image: url('https://images.pexels.com/photos/2104742/pexels-photo-2104742.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-size: cover;
+    height:auto;
+    width: 100%;
+    max-height:fit-content;
+    margin: 0;
+}
+
+.hoursandlocation .handl{
+  text-align: center;
+  width: 75%;
+  margin-bottom: 15%;
+  background-color: rgba(226, 225, 228, .75);
+  color: rgb(101, 58, 35);
+  display: block;
+  margin: 10% auto;
+  padding: 10px;
+}
+
+
+.footer{
+  background-color: rgb(0, 110, 140);
+  padding: 1em;
+  margin: 0;
+  color:rgb(226, 225, 228);
+  width: 100%;
+  height: auto;
+  text-align:center;
+}
+ 
